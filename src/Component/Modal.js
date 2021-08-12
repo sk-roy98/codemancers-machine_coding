@@ -6,7 +6,6 @@ const Modal = ({setGifSearch, setGif, modal, gifSearch, gif, selectedGif, setSel
     const giphyKey = "gBBiFL7DfuZzSEsL6fAxhusaYjN2N0P5";
     const giphyUrlSearch = `https://api.giphy.com/v1/gifs/search?api_key=${giphyKey}&limit=20&offset=0&q=${e.target.value}`;
     const giphyUrlTrending = `https://api.giphy.com/v1/gifs/trending?api_key=${giphyKey}&limit=20&offset=0`;
-
     // ? fetch(giphyUrlTrending)
     //     .then((res) => res.json())
     //     .then((result) => {
@@ -32,20 +31,18 @@ const Modal = ({setGifSearch, setGif, modal, gifSearch, gif, selectedGif, setSel
     <div>
       {modal && (
         <div className="gifContainer">
-          <input type="search" value={gifSearch} onChange={gifHandler} />
+          <input type="search" placeholder="Search GIF here" value={gifSearch} onChange={gifHandler} />
           {gif.map((item) => {
             return (
               <div className="gifBox">
                 <img
                   onClick={() => {
                     const id = selectedGif.length;
-                    let arr = [];
                     let obj = {
                       id: id,
                       src: item,
                     };
-                    arr.push(obj);
-                    setSelectedGif((prev) => prev.concat(arr));
+                    setSelectedGif((prev) => prev.concat(obj));
                     // console.log(selectedGif);
                   }}
                   className="gifs"

@@ -1,12 +1,13 @@
 import React from "react";
 
 const List = ({output}) => {
+    console.log(output)
   return (
     <div className="outputBox">
       {output.map((item) => {
         return (
           <div className="outputItem">
-            {item.text}
+            <div className={"outputText"}>{item.text}</div>
             <div className={"gifOutput"}>
               {item.gifs.map((links) => {
                 return (

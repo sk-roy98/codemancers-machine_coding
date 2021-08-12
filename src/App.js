@@ -1,6 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import Input from "./Component/Input";
+import Modal from "./Component/Modal";
 import List from "./Component/List";
 
 export default function App() {
@@ -38,8 +39,8 @@ export default function App() {
           output={output}
           setOutput={setOutput}
           gif={gif}
-          gifSearch={gifSearch} 
           setGif={setGif}
+          gifSearch={gifSearch} 
           selectedGif={selectedGif}
           setSelectedGif={setSelectedGif}
           setModal={setModal}
