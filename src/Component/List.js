@@ -1,9 +1,10 @@
 import React from "react";
 
-const List = ({output}) => {
+const List = ({output, input, selectedGif}) => {
     console.log(output)
   return (
     <div className="outputBox">
+       
       {output.map((item) => {
         return (
           <div className="outputItem">

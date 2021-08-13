@@ -194,9 +194,8 @@ section {
   width:100%;
   font-weight: bold;
   color:#ddd;
-  display:flex;
+  word-wrap: break-word;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   align-content: flex-start;
 }
 .gifOutput {

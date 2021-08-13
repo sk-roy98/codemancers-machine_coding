@@ -16,17 +16,20 @@ const Input = ({
   setGifSearch,
 }) => {
   const postHandler = () => {
-    setOutput((prev) =>
-      prev.concat({
-        id: output.length,
-        text: input,
-        gifs: selectedGif,
-      })
-    );
-    setInput("");
-    setSelectedGif([]);
-    setGifSearch("");
-    setModal(false);
+    console.log("input",input)
+    if (input.length  || selectedGif.length) {
+      setOutput((prev) =>
+        prev.concat({
+          id: output.length,
+          text: input,
+          gifs: selectedGif,
+        })
+      );
+      setInput("");
+      setSelectedGif([]);
+      setGifSearch("");
+      setModal(false);
+    }
   };
   return (
     <div style={{ width: "100%" }}>

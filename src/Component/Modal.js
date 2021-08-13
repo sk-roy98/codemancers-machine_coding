@@ -27,7 +27,7 @@ const Modal = ({setGifSearch, setGif, modal, gifSearch, gif, selectedGif, setSel
         <div className="gifContainer">
           <input type="search" placeholder="Search GIF here" value={gifSearch} onChange={gifHandler} />
           {loading && (<div style={{padding:"15px", fontSize:"1.8rem", fontWeight:"bold", color:"#fff", width:"100%"}}>Loading...</div>)}
-          {gif.map((item) => {
+          {!loading && gif.map((item) => {
             return (
               <div className="gifBox">
                 <img

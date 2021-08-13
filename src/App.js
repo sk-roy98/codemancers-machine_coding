@@ -1,7 +1,6 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Input from "./Component/Input";
-import Modal from "./Component/Modal";
 import List from "./Component/List";
 
 export default function App() {
@@ -47,7 +46,7 @@ export default function App() {
           modal={modal}
           setGifSearch={setGifSearch}
         />
-        <List output={output} />
+        <List output={output} input={input} selectedGif={selectedGif} />
       </section>
     </div>
   );
