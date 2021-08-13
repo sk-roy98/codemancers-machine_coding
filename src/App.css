@@ -196,10 +196,7 @@ section {
   color:#ddd;
   padding: 15px 15px;
   word-wrap: break-word;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  align-content: flex-start;
+  text-align: left;
 }
 .gifOutput {
   margin: 7px;
